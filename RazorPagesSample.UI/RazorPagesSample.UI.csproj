@@ -13,6 +13,10 @@
     <ProjectReference Include="..\RazorPagesSample.Domain\RazorPagesSample.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 
 
 </Project>

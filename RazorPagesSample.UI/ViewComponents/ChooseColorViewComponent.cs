@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using RazorPagesSample.Domain.Enums;
 using System;
 using System.Collections.Generic;
@@ -10,20 +11,23 @@ namespace RazorPagesSample.UI.ViewComponents
     [BindProperties]
     public class ChooseColorViewComponent : ViewComponent
     {
+        public List<SelectListItem> Items { get; set; }
         public Color SelectedColor { get; set; }
-        public List<Color> Colors { get; set; }
+
         public ChooseColorViewComponent()
         {
-            Colors = new List<Color>();
+            Items = new List<SelectListItem>();
             foreach (var item in Enum.GetValues(typeof(Color)))
             {
-                Colors.Add((Color)item);
+                Items.Add(
+                    new SelectListItem(item.ToString(),item.ToString()));
             }
         }
 
         public async Task<IViewComponentResult> InvokeAsync()
-        {            
+        {
+            TempData["superklic"] = Items[2].Value;//.FirstOrDefault(item => item.Selected == true);
             return View(this);
-        }
+        }        
     }
 }

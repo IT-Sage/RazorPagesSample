@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RazorPagesSample.UI.ViewComponents;
 
 namespace RazorPagesSample.UI
 {
@@ -12,11 +13,12 @@ namespace RazorPagesSample.UI
 
         public void OnGet()
         {
-
+            
         }
 
         public void OnPost()
         {
+            
             
         }
     }

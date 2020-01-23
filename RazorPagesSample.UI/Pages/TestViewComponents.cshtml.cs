@@ -9,9 +9,15 @@ namespace RazorPagesSample.UI
 {
     public class TestViewComponentsModel : PageModel
     {
+
         public void OnGet()
         {
 
+        }
+
+        public void OnPost()
+        {
+            
         }
     }
 }

@@ -1,0 +1,13 @@
+﻿@using RazorPagesSample.Domain.Enums
+@model RazorPagesSample.UI.ViewComponents.ChooseColorViewComponent
+<div class="col-6 offset-3">
+    <select class="custom-select">
+        <option selected="@Model.SelectedColor">Choose color...</option>
+        @foreach (var item in Model.Colors)
+        {        
+            <option value="@item">@item</option>
+        }
+
+    </select>
+
+</div>
